@@ -1,0 +1,11 @@
+{
+ DO A FROM 0 TO 3 {
+  RECT 10
+  RECT 20
+  RECT 40
+  RECT 80
+  RECT 160
+  RECT 295
+  LT 90
+ }
+}

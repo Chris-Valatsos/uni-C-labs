@@ -1,0 +1,30 @@
+The following text explains the testing strategy that has been implemented
+for the parser and interpreter source files used for the turtle assignment.
+
+The functions in the source files of the parser and the interpreter have been
+created in a specific manner that will return only a pass or an error (0 or 1).
+This method has facilitated the testing strategy that has been implemented for
+this assignment.
+
+In the source files test_parser and test_interpreter, each testing function
+has both correct and false inputs that test all possible conditions with
+respect to the formal grammar. For example, the instruction [FD 10] this will
+return a pass(1). However, the instruction [FD s2] will return an error(0).
+
+When a function in from the parser or interpreter source files returns an
+error, an error message is displayed in the terminal window. This message will
+also illustrate in which function the error has occurred. For example, the
+instruction [RT dx] will print an error message that will direct the user to
+the function that deals with the respective instruction.
+
+This strategy is effective since each input, both correct and false, will
+always return a certain value. This facilitates the use of asserts due to the
+predefined and controlled output.
+
+It should also be noted that no exit functions are used in the functions that
+correspond to the formal grammar of the LOGO language. This will enable the
+user to parse or interpret a file completely in order to identify and portray
+all possible errors that might occur in the .txt file that is being run along
+with the source files of either the parser or the interpreter. Exit functions
+are only used in the main function, when the user compiles and runs the code
+in a way that does not comply with the method that it has been formed.

@@ -1,0 +1,30 @@
+The extension of this assignment is two additional instructions in the formal
+grammar. One is to draw a rectangle and the other is to draw an arc
+
+Below is the formal grammar and the two additional instructions
+
+Standard Formal Grammar:
+
+   <MAIN> ::= "{" <INSTRCTLST>
+   <INSTRCTLST> ::= <INSTRUCTION><INSTRCTLST> |
+                  "}"
+   <INSTRUCTION> ::= <FD> |
+                     <LT> |
+                     <RT> |
+                     <DO> |
+                     <SET>
+   <FD> ::= "FD" <VARNUM>
+   <LT> ::= "LT" <VARNUM>
+   <RT> ::= "RT" <VARNUM>
+   <DO> ::= "DO" <VAR> "FROM" <VARNUM> "TO"
+                  <VARNUM> "{" <INSTRCTLST>
+   <VAR> ::= [A−Z]
+   <VARNUM> ::= number | <VAR>
+   <SET> ::= "SET" <VAR> ":=" <POLISH>
+   <POLISH> ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
+   <OP> ::= "+" | "−" | "*" | "/"
+
+Extended Instructions:
+
+   <RECT> ::= "RECT" <VARNUM>
+   <ARC> ::= "ARC" <VARNUM> <VARNUM>

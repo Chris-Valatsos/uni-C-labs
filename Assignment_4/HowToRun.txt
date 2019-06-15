@@ -1,0 +1,35 @@
+The following text explains the contents of this folder and how to run the
+different source files.
+
+The folder 1_external_libraries contains the .h files for the parser,
+interpreter and the library used to utilise the SDL graphics user interface.
+
+The folder 2_source_code contains the source files for the parser and the
+interpreter, along with their testing files, as well as the extension.
+
+The folder 3_test_files contains .txt files that each has specific instructions
+to test different cases for the parser, interpreter and extension.
+
+The following programme uses clang instead of gcc. If the clang compiler is not
+installed please use the following command:
+sudo apt install clang
+
+1. To compile the parser use the following command: make parse
+   To run the parser: ./parse 3_test_files/filename.txt
+
+2. To compile the testing file for the parser: make test_parser
+   To run the testing file for the parser: ./test_parser
+
+3. To compile the interpreter: make interp
+   To run the interpreter: ./interp 3_test_files/filename.txt
+
+4. To compile the testing file for the interpreter: make test_interpreter
+   To run the testing file for the interpreter: ./test_interpreter
+
+5. To compile the extension: make extension
+   To run the extension: ./extension 3_test_files/filename.txt
+
+6. To compile all five cases explained above: make all
+   To run all five cases: make run
+
+7. To remove the compiled files for all five cases: make clean
